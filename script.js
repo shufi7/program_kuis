@@ -117,7 +117,7 @@ function submitAnswer() {
     </div>`;
 }
 
-
+//menghitung mundur waktu setiap detik, menampilkan waktu nya, dan menampilkan jawabannya jika waktunya habis
 function startTimer() {
     const timerDisplay = document.getElementById('timer');
     const interval = setInterval(() => {
