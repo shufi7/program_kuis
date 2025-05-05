@@ -45,3 +45,22 @@ function renderQuestionButtons() {
     }
     updateButtonStyles();
 }
+
+// ubah tombol jadi hijau saat diklik next
+function updateButtonStyles() {
+    for (let i = 0; i < 10; i++) {
+        const btn = document.getElementById(`btn-q-${i}`);
+        if (userAnswers[i] !== null) {
+            btn.classList.remove('btn-outline-secondary');
+            btn.classList.add('btn-success');
+        }
+    }
+}
+
+// menyimpan jawaban
+function nextQuestion() {
+    saveAnswer();
+    if (currentQuestion < 9) currentQuestion++;
+    renderQuestion();
+}
+
