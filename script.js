@@ -79,3 +79,55 @@ function saveAnswer() {
     }
     updateButtonStyles();
 }
+
+
+//menyimpan jawaban pengguna, menghitung skor berdasarkan jawaban yang benar, lalu menampilkan hasil dan penjelasan setiap soal
+function submitAnswer() {
+    saveAnswer();
+    let score = 0;
+    for (let i = 0; i < 10; i++) {
+        if (userAnswers[i] === questions[i].answer) {
+            score++;
+        }
+    }
+
+    const container = document.querySelector('.col-md-8');
+    container.innerHTML = `<div class="card p-4 mb-3">
+        <h3 class="mb-3">Skor Anda: ${score} / 10</h3>
+        ${questions.map((q, i) => {
+            const userAnswer = userAnswers[i];
+            const correct = userAnswer === q.answer;
+            return `
+                <div class="mb-4">
+                    <h5>Soal ${i + 1}:</h5>
+                    <p>${escapeHtml(q.question)}</p>
+                    <ul>
+                        ${q.options.map((opt, idx) => {
+                            let style = '';
+                            if (idx === q.answer) style = 'font-weight: bold; color: green;';
+                            if (idx === userAnswer && userAnswer !== q.answer) style = 'color: red;';
+                            return `<li style="${style}">${escapeHtml(opt)}</li>`;
+                        }).join('')}
+                    </ul>
+                    <p><strong>Jawaban Anda:</strong> ${userAnswer !== null ? escapeHtml(q.options[userAnswer]) : 'Tidak dijawab'}</p>
+                    <p><strong>Status:</strong> ${correct ? '<span class="text-success">Benar</span>' : '<span class="text-danger">Salah</span>'}</p>
+                </div>
+            `;
+        }).join('')}
+    </div>`;
+}
+
+
+function startTimer() {
+    const timerDisplay = document.getElementById('timer');
+    const interval = setInterval(() => {
+        if (timerSeconds <= 0) {
+            clearInterval(interval);
+            submitAnswer();
+        }
+        const minutes = Math.floor(timerSeconds / 60);
+        const seconds = timerSeconds % 60;
+        timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        timerSeconds--;
+    }, 1000);
+}
