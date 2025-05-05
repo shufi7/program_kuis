@@ -1,0 +1,52 @@
+[
+    {
+      "pertanyaan": "Apa fungsi utama dari tag <head> dalam HTML?",
+      "pilihan": ["Menampilkan judul halaman", "Menyimpan metadata", "Menampilkan konten utama", "Menampilkan script"],
+      "jawaban": 1
+    },
+    {
+      "pertanyaan": "Manakah properti CSS yang digunakan untuk mengubah warna teks?",
+      "pilihan": ["text-color", "color", "font-color", "background-color"],
+      "jawaban": 1
+    },
+    {
+      "pertanyaan": "Apa output dari console.log(typeof null)?",
+      "pilihan": ["null", "object", "undefined", "boolean"],
+      "jawaban": 1
+    },
+    {
+      "pertanyaan": "Manakah tag HTML untuk membuat form input teks?",
+      "pilihan": ["<textarea>", "<text>", "<input type=\"text\">", "<textfield>"],
+      "jawaban": 2
+    },
+    {
+      "pertanyaan": "Properti CSS mana yang mengatur ukuran huruf?",
+      "pilihan": ["font-weight", "font-style", "font-size", "text-align"],
+      "jawaban": 2
+    },
+    {
+      "pertanyaan": "Metode JavaScript mana yang digunakan untuk mengubah string menjadi integer?",
+      "pilihan": ["parseInt()", "toString()", "String()", "parse()"],
+      "jawaban": 0
+    },
+    {
+      "pertanyaan": "Apa ekstensi file standar untuk file JavaScript?",
+      "pilihan": [".js", ".json", ".jsx", ".ts"],
+      "jawaban": 0
+    },
+    {
+      "pertanyaan": "Manakah dari berikut ini adalah file JSON yang valid?",
+      "pilihan": ["{ 'key': 'value' }", "{ \"key\": \"value\" }", "[key: value]", "<key>value</key>"],
+      "jawaban": 1
+    },
+    {
+      "pertanyaan": "Elemen HTML mana yang digunakan untuk tautan (link)?",
+      "pilihan": ["<link>", "<href>", "<a>", "<url>"],
+      "jawaban": 2
+    },
+    {
+      "pertanyaan": "Manakah cara menambahkan file CSS eksternal ke HTML?",
+      "pilihan": ["<style src=\"style.css\">", "<css href=\"style.css\">", "<link rel=\"stylesheet\" href=\"style.css\">", "<script src=\"style.css\">"] ,
+      "jawaban":2
+    }
+]
