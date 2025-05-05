@@ -131,3 +131,18 @@ function startTimer() {
         timerSeconds--;
     }, 1000);
 }
+
+// 
+function escapeHtml(text){
+    const map = {
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#039;'
+
+    };
+    return text.replace(/[&<>"']/g, function(m) { return map[m];});
+}
+
+window.onload = loadQuestions;
