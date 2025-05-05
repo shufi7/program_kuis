@@ -11,6 +11,7 @@ async function loadQuestions() {
     startTimer();
 }
 
+// Pertanyaan
 function renderQuestion() {
     const q = questions[currentQuestion];
     const container = document.getElementById('question-container');
@@ -27,6 +28,7 @@ function renderQuestion() {
     updateButtonStyles();
 }
 
+// Tombol 1-10
 function renderQuestionButtons() {
     const btnContainer = document.getElementById('question-buttons');
     btnContainer.innerHTML = '';
