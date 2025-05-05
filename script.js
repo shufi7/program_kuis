@@ -26,3 +26,20 @@ function renderQuestion() {
     `;
     updateButtonStyles();
 }
+
+function renderQuestionButtons() {
+    const btnContainer = document.getElementById('question-buttons');
+    btnContainer.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-outline-secondary m-1';
+        btn.textContent = i + 1;
+        btn.id = `btn-q-${i}`;
+        btn.onclick = () => {
+            currentQuestion = i;
+            renderQuestion();
+        };
+        btnContainer.appendChild(btn);
+    }
+    updateButtonStyles();
+}
