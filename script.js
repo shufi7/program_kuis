@@ -57,10 +57,25 @@ function updateButtonStyles() {
     }
 }
 
-// menyimpan jawaban
+// pindah ke pertanyaan selanjutnya setelah menyimpan jawaban
 function nextQuestion() {
     saveAnswer();
     if (currentQuestion < 9) currentQuestion++;
     renderQuestion();
 }
 
+// prevQuestion pindah ke pertanyaan sebelumnya setelah menyimpan jawaban
+function prevQuestion() {
+    saveAnswer();
+    if (currentQuestion > 0) currentQuestion--;
+    renderQuestion();
+}
+
+// mencatat jawaban yang dipilih ke dalam userAnswers
+function saveAnswer() {
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (selected) {
+        userAnswers[currentQuestion] = parseInt(selected.value);
+    }
+    updateButtonStyles();
+}
