@@ -1,0 +1,63 @@
+body {
+  background-color: #f4fdfb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sidebar {
+  background-color: #00a28c;
+  min-height: 100vh;
+  padding-top: 1rem;
+}
+
+.sidebar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background-color: #00846f;
+}
+
+.soal-number .btn {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  font-weight: 500;
+}
+
+.question-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-success {
+  background-color: #00a28c;
+  border-color: #00a28c;
+}
+
+.btn-success:hover {
+  background-color: #00846f;
+  border-color: #00846f;
+}
+
+.time-box, .next-test {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=main.css.map */
