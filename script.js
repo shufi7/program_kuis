@@ -16,7 +16,7 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = `
         <h5>Pertanyaan ${currentQuestion + 1}</h5>
-        <p>${escapeHtml(q.pertanyaan)}</p>
+        <p>${escapeHtml(q.question)}</p>
         ${q.options.map((opt, i) => `
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="q${currentQuestion}opt${i}" 
